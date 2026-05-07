@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="stylesm.css">
+</head>
+<body>
+    <header class="nav">
+        <div class="nav_inner">
+            <div class="logo">NETFLIX</div>
+            <form id="searchForm" class="search" autocomplete="off"> 
+                <input id="searchInput" class="search__input" type="search" placeholder="Search movies..." />
+                    <button class="search__btn" type="submit">Search</button>
+            </form>
+        </div>
+    </header>
+<main>
+    <section class="hero" id=""hero>
+        <div class="her0_bg" id="hero_bg"></div>
+            <div class="hero__overlay"></div><!--Creates dark transparent layer over background.-->
+            <div class="hero_content">
+                <h1 class="hero_title" id="hero_title">Loading...</h1><!-- temporary text js will later replace it dynamically-->
+                <p class="hero_meta" id="heroMeta"></p>
+                <p class="hero__desc" id="heroDesc"></p>
+                 <div class="hero__actions">
+                    <button class="btn btn--light" id="heroPlayBtn" type="button">Play</button>
+                    <button class="btn btn--dark" id="heroInfoBtn" type="button">More Info</button>
+                </div>
+             </div>    
+    </section>
+<!--rows-->
+<section class="rows" id="rows">
+   <div class="row">
+    <div class="row_head">
+        <h2 class="row_title">Trending</h2>
+    </div>
+    <div class="row__list" id="rowTrending"></div><!-- this empty container will ater contain movie cards-->
+    </div> 
+    <div class="row">
+        <div class="row_head">
+            <h2 class="row_title">Top Rated</h2>
+        </div>
+        <div class="row__list" id="rowTopRated"></div>
+    </div>
+    <div class="row">
+        <div class="row__head">
+          <h2 class="row__title">Popular</h2>
+        </div>
+        <div class="row__list" id="rowPopular"></div>
+      </div>
+</section>    
+</main>
+
+<!--modal   creates popup modal -->
+<div class="modal" id="modal" aria-hidden="true">
+   <div class="modal__backdrop" id="modalBackdrop"></div> 
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal__close" id="modalCloseBtn" aria-label="Close">✕</button>
+        <h3 class="modal__title" id="modalTitle">Title</h3>
+        <p class="modal__meta" id="modalMeta"></p>
+        <p class="modal__desc" id="modalDesc"></p>
+    </div>
+</div>
+<script src="app.js"></script><!--Connects JavaScript file to HTML.-->
+</body>
+</html>
