@@ -1,1 +1,0 @@
-const TMDB_API_KEY = "d88b877e2efdc7e653e2968a83551d83";
