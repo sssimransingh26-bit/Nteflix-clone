@@ -7,29 +7,29 @@
     <link rel="stylesheet" href="stylesm.css">
 </head>
 <body>
-    <header class="nav">
-        <div class="nav_inner">
-            <div class="logo">NETFLIX</div>
-            <form id="searchForm" class="search" autocomplete="off"> 
-                <input id="searchInput" class="search__input" type="search" placeholder="Search movies..." />
-                    <button class="search__btn" type="submit">Search</button>
-            </form>
-        </div>
-    </header>
-<main>
-    <section class="hero" id=""hero>
-        <div class="her0_bg" id="hero_bg"></div>
-            <div class="hero__overlay"></div><!--Creates dark transparent layer over background.-->
-            <div class="hero_content">
-                <h1 class="hero_title" id="hero_title">Loading...</h1><!-- temporary text js will later replace it dynamically-->
-                <p class="hero_meta" id="heroMeta"></p>
-                <p class="hero__desc" id="heroDesc"></p>
-                 <div class="hero__actions">
-                    <button class="btn btn--light" id="heroPlayBtn" type="button">Play</button>
-                    <button class="btn btn--dark" id="heroInfoBtn" type="button">More Info</button>
-                </div>
-             </div>    
-    </section>
+<header class="nav">
+  <div class="nav__inner">
+    <div class="logo">NETFLIX</div>
+    <form id="searchForm" class="search" autocomplete="off">
+      <input id="searchInput" class="search__input" type="search" placeholder="Search movies..." />
+      <button class="search__btn" type="submit">Search</button>
+    </form>
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero__bg" id="heroBg"></div>
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <h1 class="hero__title" id="heroTitle">Loading...</h1>
+    <p class="hero__meta" id="heroMeta"></p>
+    <p class="hero__desc" id="heroDesc"></p>
+    <div class="hero__actions">
+      <button class="btn btn--light" id="heroPlayBtn" type="button">Play</button>
+      <button class="btn btn--dark" id="heroInfoBtn" type="button">More Info</button>
+    </div>
+  </div>
+</section>
 <!--rows-->
 <section class="rows" id="rows">
    <div class="row">
