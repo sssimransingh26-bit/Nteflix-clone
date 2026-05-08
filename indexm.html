@@ -1,68 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix Clone</title>
-    <link rel="stylesheet" href="stylesm.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netflix Clone</title>
+  <link rel="stylesheet" href="stylesm.css" />
 </head>
 <body>
-<header class="nav">
-  <div class="nav__inner">
-    <div class="logo">NETFLIX</div>
-    <form id="searchForm" class="search" autocomplete="off">
-      <input id="searchInput" class="search__input" type="search" placeholder="Search movies..." />
-      <button class="search__btn" type="submit">Search</button>
-    </form>
-  </div>
-</header>
+  <header class="nav">
+    <div class="nav__inner">
+      <div class="logo">NETFLIX</div>
 
-<section class="hero" id="hero">
-  <div class="hero__bg" id="heroBg"></div>
-  <div class="hero__overlay"></div>
-  <div class="hero__content">
-    <h1 class="hero__title" id="heroTitle">Loading...</h1>
-    <p class="hero__meta" id="heroMeta"></p>
-    <p class="hero__desc" id="heroDesc"></p>
-    <div class="hero__actions">
-      <button class="btn btn--light" id="heroPlayBtn" type="button">Play</button>
-      <button class="btn btn--dark" id="heroInfoBtn" type="button">More Info</button>
+      <form id="searchForm" class="search" autocomplete="off">
+        <input
+          id="searchInput"
+          class="search__input"
+          type="search"
+          placeholder="Search movies..."
+        />
+        <button class="search__btn" type="submit">Search</button>
+      </form>
     </div>
-  </div>
-</section>
-<!--rows-->
-<section class="rows" id="rows">
-   <div class="row">
-    <div class="row_head">
-        <h2 class="row_title">Trending</h2>
-    </div>
-    <div class="row__list" id="rowTrending"></div><!-- this empty container will ater contain movie cards-->
-    </div> 
-    <div class="row">
-        <div class="row_head">
-            <h2 class="row_title">Top Rated</h2>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" id="heroBg"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <h1 class="hero__title" id="heroTitle">Loading...</h1>
+        <p class="hero__meta" id="heroMeta"></p>
+        <p class="hero__desc" id="heroDesc"></p>
+        <div class="hero__actions">
+          <button class="btn btn--light" id="heroPlayBtn" type="button">Play</button>
+          <button class="btn btn--dark" id="heroInfoBtn" type="button">More Info</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROWS -->
+    <section class="rows" id="rows">
+      <div class="row">
+        <div class="row__head">
+          <h2 class="row__title">Trending</h2>
+        </div>
+        <div class="row__list" id="rowTrending"></div>
+      </div>
+
+      <div class="row">
+        <div class="row__head">
+          <h2 class="row__title">Top Rated</h2>
         </div>
         <div class="row__list" id="rowTopRated"></div>
-    </div>
-    <div class="row">
+      </div>
+
+      <div class="row">
         <div class="row__head">
           <h2 class="row__title">Popular</h2>
         </div>
         <div class="row__list" id="rowPopular"></div>
       </div>
-</section>    
-</main>
+    </section>
+  </main>
 
-<!--modal   creates popup modal -->
-<div class="modal" id="modal" aria-hidden="true">
-   <div class="modal__backdrop" id="modalBackdrop"></div> 
+  <!-- MODAL -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__backdrop" id="modalBackdrop"></div>
     <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <button class="modal__close" id="modalCloseBtn" aria-label="Close">✕</button>
+      <button class="modal__close" id="modalCloseBtn" aria-label="Close">✕</button>
+      <div class="modal__body">
         <h3 class="modal__title" id="modalTitle">Title</h3>
         <p class="modal__meta" id="modalMeta"></p>
         <p class="modal__desc" id="modalDesc"></p>
+      </div>
     </div>
-</div>
-<script src="app.js"></script><!--Connects JavaScript file to HTML.-->
+  </div>
+
+  <script src="appm.js"></script>
 </body>
 </html>
